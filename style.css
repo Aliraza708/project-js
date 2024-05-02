@@ -22,14 +22,6 @@ h1{
    
 
 }
-#main1{
-    display:flex ;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-top: 50px;
-    gap: 20px;
-}
 .hover:hover{
     background:linear-gradient(#14ffe9,#ffeb3b,#ff00e0);
     transition:  1s ease;
