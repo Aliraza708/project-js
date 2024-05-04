@@ -1,0 +1,18 @@
+body{
+    font-size: 20px !important;
+    gap: 20px !important;
+    font-weight: bold !important;
+    
+
+}
+.font{
+    font-size: 50px !important;
+    gap: 20px !important;
+    font-weight: bold !important;
+    color: blue !important;
+    margin-top: 30px;
+}
+#center{
+    text-align: center;
+    
+}
