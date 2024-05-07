@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop watch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+  <div class="background-video">
+    <video autoplay muted loop id="myVideo">
+      <source src="assest/2157006-hd_1920_1080_25fps.mp4" type="video/mp4">
+    </video>
+    <div class="content">
+      <!-- Your content here -->
+      <div id="h">
+      <h1>Stop Watch</h1></div>
+      <div id="main">
+          <div id="box">
+              <div id="box2">
+                  
+                  <h1 id="minutes">00:</h1>
+                  <h1 id="seconds">00:</h1>
+                  <h1 id="miliSeconds">00</h1>
+  
+  
+              </div>
+          </div>
+          
+      </div>
+      <div id="text">
+          <button onclick="start()" id="dis">START</button>
+          <button onclick="stop()">STOP</button>
+          <button onclick="reset()" id="reset" >RESTART</button>
+      </div>
+    </div>
+  </div>    
+    
+  
+    <script src="app.js"></script>
+</body>
+</html>
