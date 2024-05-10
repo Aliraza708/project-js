@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Expense Tracker</h2>
+        <input type="text" id="userInput">
+        <button onclick="income()">Income</button>
+        <button onclick="expence()">Expense</button>
+        <div class="box">
+            <h2 class="font">Total Income :</h2>
+            <h2 id="income1">00</h2>
+        </div>
+        <div class="box">
+            <h2 class="font">Total Expense : </h2>
+            <h2 id="expence1">00</h2>
+        </div>
+        <div class="box">
+            <h2 class="font"> Total Savings :</h2>
+            <h2 id="saving">00</h2>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

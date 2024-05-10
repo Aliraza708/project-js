@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body{
+    text-align: center;
+  font-family: "Almendra", serif;
+  font-weight: 400;
+  font-style: normal;
+
+    
+}
+.contaner{
+    background-color: yellow;
+    width: 250px;
+    height:200px;
+    margin-left: 400px;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-radius: 20px;
+    /* gap: 0px; */
+}
+button{
+    font-family: "Almendra", serif;
+    font-weight: 700;
+    font-style: italic;
+    width: 50px;
+    margin-top: 5px;
+    font-size: large;
+    height: 30px ;
+    color: white;
+    background-color: orange;
+   outline: none;
+   border: none;
+      
+}
+input{
+    width: 200px;
+    border-radius: 10px;
+    height: 30px;
+    outline: none;
+    padding-left: 10px;
+
+}

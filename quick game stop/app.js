@@ -20,13 +20,17 @@ function start(){
    if(secondin.innerText >=1000){
    clearInterval(interval);
   
-  
-    
+   if(input.value == secondin.innerText){
+    result.innerText = "You win";
+    result.style.color = "green";
+}else{
+    result.innerText = "You loss";
+    result.style.color = "red";
+};
 }
 
+},10)}
 
-},10)
-}
 
 function stop(){
     document.getElementById("dis").disabled = false
@@ -35,7 +39,14 @@ function stop(){
         result.innerText = "You win";
         result.style.color = "green";
     }else{
-        result.innerText = "You loss";
+        result.innerText = "You loss ! try again";
         result.style.color = "red";
     };
+}
+function reset() {
+    document.getElementById("dis").disabled = false
+    clearInterval(interval);
+    second = 0;
+    document.getElementById("second").innerHTML = second+"0";
+    result.innerText = "";
 }
