@@ -3,12 +3,13 @@ var expence1 = document.getElementById("expence1");
 var income1 = document.getElementById("income1");
 
 function income(){
-    var  userInput=Number(document.getElementById("userInput").value)
-    income1.innerHTML = userInput;
+    var  userInput=document.getElementById("userInput").value;
+    var total = Number( income1.innerText )+ Number( userInput)
+    income1.innerHTML = total;
     savingupdate()
 }
 function expence(){ 
-     var ex =  Number( expence1.innerText) + parseInt(userInput.value)
+     var ex =  Number( expence1.innerText) + Number(userInput.value)
     if(ex==income1.innerText){
         income1.innerText = "Income Finish";
        
@@ -21,7 +22,7 @@ function expence(){
 function savingupdate(){
     var result = expence1.innerText - income1.innerText
     saving.innerText = result
-    if(income1.innerText == "Income Finsh"){
+    if(income1.innerText == "Income Finish"){
         saving.innerText = "Not Saving"
     }
 

@@ -32,7 +32,7 @@ body{
 .box span{
   display:inline-flex;
   font-weight: bolder;
-  font-size: x-large;
+  font-size: 20px;
   /* width: 100px; */
 
 }
