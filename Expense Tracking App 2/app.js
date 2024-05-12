@@ -10,7 +10,7 @@ function income(){
 function expence(){ 
      var ex =  Number( expence1.innerText) + parseInt(userInput.value)
     if(ex==income1.innerText){
-        income1.innerText = "Income Finsh";
+        income1.innerText = "Income Finish";
        
     }
      expence1.innerText =ex
@@ -22,7 +22,7 @@ function savingupdate(){
     var result = expence1.innerText - income1.innerText
     saving.innerText = result
     if(income1.innerText == "Income Finsh"){
-        saving.innerText = "Not Balance"
+        saving.innerText = "Not Saving"
     }
 
 }
