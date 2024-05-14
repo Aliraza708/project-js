@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    
+}
+.contaner{
+    text-align: center;
+    background-image: url(img/pexels-jeremy-bishop-1260133-20147082.jpg);
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    background-size: cover;
+    height: 600px;
+
+    
+
+}
+#cent{
+  padding-top: 100px;
+
+}
+#counter{
+    font-size:60px;
+    color: white;
+}
+
+button{
+    width: 170px;
+    height:40px;
+    border: none;
+    border-radius: 5px;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+}
+button:hover{
+    background-color: #2980b9;
+    
+}#head{
+    margin-top: -20px;
+    font-size: 40px;
+    color: #6D67E4;
+
+}

@@ -9,12 +9,15 @@ function income(){
     savingupdate()
 }
 function expence(){ 
+    
      var ex =  Number( expence1.innerText) + Number(userInput.value)
-    if(ex==income1.innerText){
-        income1.innerText = "Income Finish";
-       
-    }
+    
      expence1.innerText =ex
+     if(ex ===income1.innerText){
+        income1.innerText = Number("00");
+        expence1.innerText = Number("00");
+        
+    }
   
     savingupdate();
 
@@ -22,8 +25,6 @@ function expence(){
 function savingupdate(){
     var result = expence1.innerText - income1.innerText
     saving.innerText = result
-    if(income1.innerText == "Income Finish"){
-        saving.innerText = "Not Saving"
-    }
+
 
 }
