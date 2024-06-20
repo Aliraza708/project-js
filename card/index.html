@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .box1 {
+            border: 1px solid green !important;
+            /* margin-right: 3px; */
+            margin-top: 5px;
+        }
+
+        .add {
+            display: flex;
+            /* justify-content: center; */
+        }
+
+        .add>button {
+
+            margin-top: 4px;
+            margin-left: 20px;
+            /* background-color: rgb(134, 134, 210);
+             */
+            border: 3px solid rgb(134, 134, 210);
+            /* color:white; */
+            width: 60px;
+            text-transform: capitalize;
+            /* font-size: x-large; */
+            border-radius: 5px;
+            /* height: 20px; */
+        }
+        #h1{
+           font-size:xx-large ;
+           margin-top: -80px;
+           font-weight: bolder;
+        }#all-product{
+            margin-top: -70px;
+        }
+    </style>
+</head>
+
+<body class="py-24">
+    <h1 id="h1" class="text-2xl text-center my-5">Added to Cart <span id="ad">0</span></h1>
+    <div class="container px-5 py-24 mx-auto box">
+        <div id="all-product" class="flex flex-wrap -m-4 box">
+
+        </div>
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Filter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="fil">
+        <select id="categoryFilter">
+            <option value="">All Categories</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Home Appliances">Home Appliances</option>
+            <option value="Audio">Audio</option>
+            <option value="Footwear">Footwear</option>
+            <option value="Wearables">Wearables</option>
+            <option value="Gaming">Gaming</option>
+            <option value="Accessories">Accessories</option>
+            <option value="Kitchen Appliances">Kitchen Appliances</option>
+            <option value="Home Office">Home Office</option>
+            <option value="Outdoor">Outdoor</option>
+            <option value="Additive Manufacturing">Additive Manufacturing</option>
+        </select>
+        <button onclick="filterProducts()" id="but">Select</button>
+    </div>
+    <div id="product" ></div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -4,6 +4,7 @@ var counter = document.getElementById("counter");
 
 function increment(){
  var count = counter.innerText ;
+
  count ++
  counter.innerText = count ;
 
@@ -12,8 +13,7 @@ function increment(){
      counter.innerText = "0"+count
  }
 
-}
-
+} 
 function resat (){
 
     counter.innerText = 0
