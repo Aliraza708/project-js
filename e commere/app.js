@@ -6,7 +6,7 @@ var products = [
     price: 699.99,
     category: "Electronics",
     inStock: true,
-    imageUrl: "img/smartphone-with-gradient-wallpaper_23-2147846500.jpg"
+    imageUrl: "img/p.avif"
   },
   {
     id: 2,
@@ -180,40 +180,166 @@ var products = [
     imageUrl: "img/back.jpg"
   },
   {
-    id : 21 ,
+    id: 21,
     name: "3D Printer",
     title: "Industrial 3D Printer",
     description: "An industrial-grade 3D printer for rapid prototyping and production.",
     price: 15000,
     category: "Additive Manufacturing",
     imageUrl: "img/3 d.jpg"
-},
+  },
 ];
+
+var search = document.getElementById("input");
+var but = document.getElementById("but");
+var cardNumber = document.getElementById("cardNumber");
+var container = document.getElementById("container");
+var form = document.getElementById("form");
+var email = document.getElementById("email");
+var password = document.getElementById("password");
+var homecontiner = document.getElementById("homecontiner");
+var login_button = document.getElementById("login_button");
+var pop = document.getElementById("popapContainer");
+
+// var search = document.getElementById("search");
 
 // Function to display products
 function displayProducts(products) {
   var productContainer = document.getElementById("product");
   productContainer.innerHTML = "";
-  products.forEach((data, index) => {
+  products.forEach((data) => {
     productContainer.innerHTML += `<div class="card">
       <div class="card-inner">
         <img id="imges" src="${data.imageUrl}" alt="Image 1">
         <div class="card-overlay">
-            <h2>${data.name}</h2>
+            <h2>${data.name}</h2> 
             <p >${data.description}</p>
-            <p>$${data.price}</p>
             <p>${data.category}</p>
+            <p>$${data.price}</p>
+            <button onclick="add(this)" id="add_list">Add to list</button>
+            
         </div>
       </div>
     </div>`;
   });
-}
-function filterProducts(){
-var category = document.getElementById("categoryFilter").value ;
-var fillter = products.filter(data=> {
-  return category === "" || data.category === category
+} 
+
+
+but.addEventListener("click", function () {  
+  var fillter_name = products.filter(data => data.name.toLocaleLowerCase().includes(search.value.toLocaleLowerCase()))
+
+  displayProducts(fillter_name)
+
 })
-displayProducts(fillter)
+displayProducts(products)
+// function filterProducts() {
+//   var category = document.getElementById("categoryFilter").value;
+//   var fillter = products.filter(data => {
+//     return category === "" || data.category === category
+//   })
+//   displayProducts(fillter)
+// }
+
+// var category = document.getElementById("categoryFilter");
+// category.addEventListener("change",function(){
+//   var fillter = products.filter(data => {
+//         return category.value === "" || data.category === category.value
+//       })
+//       displayProducts(fillter)
+// })
+
+// displayProducts(products);
+
+
+
+
+// var home = document.getElementById("home")
+
+// home.addEventListener("click",function(){
+//   displayProducts(products);
+//    search.value = "";
+// })
+
+
+  //  add cart section
+   function add(element){
+    if(element.innerHTML == "Added"){
+      cardNumber.innerText =  cardNumber.innerText - 1;
+      element.innerText = "Add";
+      cardNumber.style.color="#FFA4AE"
+     if( cardNumber.innerText == 0){
+      cardNumber.style.color="black"
+     }
+  
+  
+    }else{
+      cardNumber.innerText =  parseInt(cardNumber.innerText )+1;
+      element.innerText = "Added"
+       cardNumber.style.color="#FFA4AE"
+    }
+   }
+
+  //  login section
+  
+function run(){
+  form.style.display= "block"
+ form.classList.add("center")
+}
+function login(){
+  if(!email.value || !password.value) return alert("enter email & password");
+  localStorage.setItem("email",email.value);
+  checkFuncation()
+}
+ function checkFuncation(){
+    var email = localStorage.getItem("email")
+  if(email){
+    container.style.display = "none";
+    login_button.style.display = "none"
+    homecontiner.innerHTML = `<i class="fa-solid fa-circle-user"></i>`
+    homecontiner.classList.add("text")
+    homecontiner.style.display = "block"
+    
+    
+
+  }else{
+    container.style.display = "block";
+    homecontiner.style.display = "none"
+    // popap section
+
+    setTimeout(()=>{
+      var div = ` <div id="Image"><img src="./newsletter.png" alt="eee"></div>
+    <button onclick="cancel()" id="cancel">x</button>
+    <div>
+      <h1 id ="heading">Subscribe Newsletter.</h1>
+    <div id="para">
+      <p>Subscribe Newsletter.Subscribe the <b>JUST FOR YOU</b> to get latest products and discount update.</p></div>
+      <div class="popapContainerinput" ><input id="email_com" type="text" placeholder="Email Address">
+       <div> <button onclick="sub_login()" id="Subscribe">SUBSCRIBE</button></div>
+      </div>
+     
+    </div>`
+    pop.style.backgroundColor = "white"
+    pop.style.display = "flex"
+    pop.style.position = "absolute"
+    pop.style.width = "850px"
+    pop.style.height = "400px"
+    pop.style.boxShadow = "0 0 20px #787878"
+    pop.style.borderRadius = "10px"
+    pop.style.zIndex = "10px"
+    pop.innerHTML += div
+    },4000)
+   
+  
+  }
 }
 
-displayProducts(products);
+checkFuncation()
+function cancel(){
+  pop.style.display = "none"
+ }
+ function loginForm_cancel(){
+  form.style.display = "none"
+  
+ }
+
+
